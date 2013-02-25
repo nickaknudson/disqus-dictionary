@@ -28,9 +28,8 @@ def string_to_regexp(string)
   regexp.push Regexp.new "^#{string}$"
 
   # repeated letter match
-  string = string.squeeze # remove repeated letters
   regexpstr = String.new("^")
-  string.each_char do |c|
+  string.squeeze.each_char do |c|
     regexpstr.concat("#{c}+")
   end
   regexpstr.concat("$")
@@ -39,7 +38,7 @@ def string_to_regexp(string)
   # vowel substitution match
   regexpstr = String.new("^")
   vowels = ['a', 'e', 'i', 'o', 'u']
-  string.each_char do |c|
+  string.squeeze.each_char do |c|
     if vowels.include? c
       regexpstr.concat("(a|e|i|o|u)+")
     else
