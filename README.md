@@ -3,6 +3,15 @@ disqus-dictionary
 
 A dictionary application built with ruby.
 
+Installation
+============
+
+```
+$ chmod -c +x spell_suggest.rb
+$ chmod -c +x generate_suggest.rb
+$ chmod -c +x test.rb
+```
+
 spell_suggest.rb
 ================
 
