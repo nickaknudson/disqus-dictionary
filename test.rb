@@ -130,7 +130,7 @@ def format_input(input)
   if input.ascii_only?
     return input
   else
-    raise ArgumentError, "Not alpha-numeric", caller
+    raise ArgumentError, "Not ASCII", caller
   end
 end
 
